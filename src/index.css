@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-semibold transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+  }
+}
+
+/* Custom styles for react-slick */
+.slick-prev:before,
+.slick-next:before {
+  color: #3B82F6;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #3B82F6;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #2563EB;
+}
+
+/* Smooth sliding effect */
+.slick-slide {
+  transition: all 0.3s ease;
+}
+
+/* Center active slide */
+.slick-center {
+  transform: scale(1.1);
+  z-index: 1;
+}
